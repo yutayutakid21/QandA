@@ -15,7 +15,11 @@ import UIKit
  ・3問の問題を作成し、回答を2択とし、正答数を最後に表示してください。
  
  
+ 
  */
+
+
+//30分以内のスピードコーディング
 
 class ViewController: UIViewController {
     
