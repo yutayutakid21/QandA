@@ -22,4 +22,6 @@ class Question{
     let answer3a = "右"
     let answer3b = "左"
     
+    
+    
 }

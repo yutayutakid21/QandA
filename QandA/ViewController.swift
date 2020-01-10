@@ -18,7 +18,16 @@ import UIKit
  */
 
 class ViewController: UIViewController {
-
+    
+    
+    @IBOutlet weak var questionLabel: UILabel!
+    
+    
+    @IBOutlet weak var answer1Button: UIButton!
+    
+    
+    @IBOutlet weak var answer2Button: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
