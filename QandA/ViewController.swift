@@ -8,6 +8,15 @@
 
 import UIKit
 
+
+
+/*
+ 
+ ・3問の問題を作成し、回答を2択とし、正答数を最後に表示してください。
+ 
+ 
+ */
+
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
