@@ -19,18 +19,23 @@ import UIKit
  */
 
 
-//30分以内のスピードコーディング
 
 class ViewController: UIViewController {
     
-    
+    //問題文を表示
     @IBOutlet weak var questionLabel: UILabel!
-    
-    
+    //回答１を表示
     @IBOutlet weak var answer1Button: UIButton!
-    
-    
+    //回答2を表示
     @IBOutlet weak var answer2Button: UIButton!
+    
+    //現在の問題数
+    var questionNumber = 0
+    //選択された回答　回答1なら1、回答2なら2になる
+    var pickedAnswer = 0
+    //正解数をprintで表示
+    var correctAnswerNumber = 0
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
