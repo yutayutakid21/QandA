@@ -58,6 +58,20 @@ class ViewController: UIViewController {
         }
     }
     
+    
+    //回答を確認する
+    func check(){
+        
+        let correctAnswer = allQuestion.list[0].correctCheck
+        
+        if correctAnswer == pickedAnswer {
+            print("正解")
+            correctAnswerNumber = correctAnswerNumber + 1
+        } else {
+            print("不正解")
+        }
+    }
+    
 
 }
 
