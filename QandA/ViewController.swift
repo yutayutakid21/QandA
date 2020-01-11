@@ -56,6 +56,15 @@ class ViewController: UIViewController {
         } else if (sender as AnyObject).tag == 2 {
             pickedAnswer = 2
         }
+        
+        //問題に対する、回答が正しいのか
+        check()
+        
+        //次の問題を出題
+        nextQuestion()
+        
+        
+        
     }
     
     
@@ -69,6 +78,25 @@ class ViewController: UIViewController {
             correctAnswerNumber = correctAnswerNumber + 1
         } else {
             print("不正解")
+        }
+    }
+    
+    
+    
+    
+    //次の質問へ進む
+    func nextQuestion(){
+        if questionNumber <= 1 {
+            questionNumber = questionNumber + 1
+            //問題文
+            questionLabel.text = allQuestion.list[questionNumber].questionText
+            //回答1
+            answer1Button.titleLabel?.text = allQuestion.list[questionNumber].answer1
+            //回答2
+            answer2Button.titleLabel?.text = allQuestion.list[questionNumber].answer2
+        } else {
+            print("質問終了")
+            print("正解数は\(correctAnswerNumber)")
         }
     }
     
