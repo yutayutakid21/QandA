@@ -70,7 +70,7 @@ class ViewController: UIViewController {
     //回答を確認する
     func check(){
         
-        let correctAnswer = allQuestion.list[0].correctCheck
+        let correctAnswer = allQuestion.list[questionNumber].correctCheck
         
         if correctAnswer == pickedAnswer {
             print("正解")
