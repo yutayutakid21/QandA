@@ -11,19 +11,19 @@ import Foundation
 class Question{
     
     let questionText: String
-       let answer1: String
-       let answer2: String
-       let correctCheck: Bool
-       
-       
-       init(questionText:String, answer1:String, answer2:String, correctOrNot:Bool){
-           
-           self.questionText = questionText
-           self.answer1 = answer1
-           self.answer2 = answer2
-           correctCheck = correctOrNot
-
-       }
+    let answer1: String
+    let answer2: String
+    let correctCheck: Int
+    
+    
+    init(questionText:String, answer1:String, answer2:String, correctOrNot:Int){
+        
+        self.questionText = questionText
+        self.answer1 = answer1
+        self.answer2 = answer2
+        correctCheck = correctOrNot
+        
+    }
     
     
     

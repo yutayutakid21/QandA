@@ -43,11 +43,10 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         //初期に表示される画面の実装
-        //UIButtonの表示がおかしい・・・
         questionLabel.text = allQuestion.list[0].questionText
-        answer1Button.titleLabel?.text = allQuestion.list[0].answer1
-        answer2Button.titleLabel?.text = allQuestion.list[0].answer2
-    }
+        answer1Button.setTitle(allQuestion.list[0].answer1, for: .normal)
+        answer2Button.setTitle(allQuestion.list[0].answer2, for: .normal)
+         }
     
     
     @IBAction func answer(_ sender: Any) {
@@ -71,7 +70,7 @@ class ViewController: UIViewController {
     //回答を確認する
     func check(){
         
-        let correctAnswer = allQuestion.list[0].correctCheck
+        let correctAnswer = allQuestion.list[questionNumber].correctCheck
         
         if correctAnswer == pickedAnswer {
             print("正解")
@@ -91,9 +90,9 @@ class ViewController: UIViewController {
             //問題文
             questionLabel.text = allQuestion.list[questionNumber].questionText
             //回答1
-            answer1Button.titleLabel?.text = allQuestion.list[questionNumber].answer1
+            answer1Button.setTitle(allQuestion.list[questionNumber].answer1, for: .normal)
             //回答2
-            answer2Button.titleLabel?.text = allQuestion.list[questionNumber].answer2
+            answer2Button.setTitle(allQuestion.list[questionNumber].answer2, for: .normal)
         } else {
             print("質問終了")
             print("正解数は\(correctAnswerNumber)")
@@ -102,4 +101,3 @@ class ViewController: UIViewController {
     
 
 }
-
